@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: rgba(131, 109, 175, 0.6);
+    --white-color: #FFFFFF;
+    --black-color: #1A1A1A;
+    --font-primary: Manrope;
+    --font-highlight: Dela Gothic One;
+    font-size: 16px;
+    font-family: Manrope;
+    font-weight: 200;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black-color);
+}
+
+.container {
+    width: 80%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+/* Utilities */

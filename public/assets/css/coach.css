@@ -1,0 +1,72 @@
+/* Banner */
+.bg-banner-coach {
+    background: url("/assets/images/backgroundBanner2.png");
+    background-size: cover;
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+}
+
+.banner-coach-title p {
+    color: var(--white-color);
+}
+
+.banner-coach-title h1 {
+    color: var(--white-color);
+    font-size: 3em;
+    font-family: var(--font-highlight);
+    font-weight: 500;
+}
+
+.bg-coach-list {
+    background-color: var(--black-color);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.coach-list-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white-color);
+}
+
+.coach-list-image a {
+    display: block;
+    width: 100%;
+}
+
+.coach-list-image a img {
+    display: block;
+    width: 100%;
+    opacity: .5;
+    transition: .5s;
+    height: 300px;
+    object-fit: cover;
+}
+
+.coach-list-image a.active img {
+    opacity: 1;
+}
+
+.coach-list-image a:hover img {
+    opacity: 1;
+}
+
+.coach-list-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem;
+    color: var(--white-color);
+}
+
+.coach-list-body h2 {
+    font-size: 2.5em;
+    font-family: var(--font-highlight);
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+.coach-list-body p {
+    text-align: justify;
+    line-height: 1.8;
+}
