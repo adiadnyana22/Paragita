@@ -323,7 +323,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 3rem 0;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .news-card {
@@ -367,7 +367,7 @@
 }
 
 .news-card:hover {
-    opacity: .8;
+    background-color: #D9D9D9;
 }
 
 .news-text p {

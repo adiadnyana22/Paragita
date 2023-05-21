@@ -10,7 +10,7 @@
 
 @section('content')
     <section class="bg-banner">
-        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "prevNextButtons": false, "autoPlay": true, "wrapAround": true }'>
+        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "prevNextButtons": false, "autoPlay": 4000, "wrapAround": true }'>
             <div class="carousel">
                 <img src="{{ asset('assets/images/banner1.png') }}" alt="Banner Image">
             </div>
@@ -34,7 +34,7 @@
         </div>
     </section>
     <section class="bg-about">
-        <div class="banner-about" id="about">
+        <div class="banner-about">
             <div class="about-card">
                 <div class="about-image">
                     <img src="{{ asset('assets/images/logoWhite.png') }}" alt="Logo Paragita">
@@ -49,7 +49,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-achievement" id="achievement">
+    <section class="bg-achievement">
         <div class="container">
             <div class="achievement-head">
                 <div class="achievement-title">
@@ -94,7 +94,7 @@
         </div>
     </section>
     <section class="bg-news-gallery">
-        <section class="bg-news" id="news">
+        <section class="bg-news">
             <div class="container">
                 <div class="news-head">
                     <div class="news-title">
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-gallery" id="gallery">
+        <section class="bg-gallery">
             <div class="gallery-title">
                 <div class="container">
                     <span>This is our recent activiy,</span>
@@ -163,9 +163,8 @@
                 </div>
             </div>
         </section>
-{{--        Circle Ngebug kalo klik gallery di navbar--}}
-{{--        <div class="news-gallery-circle1"></div>--}}
-{{--        <div class="news-gallery-circle2"></div>--}}
-{{--        <div class="news-gallery-circle3"></div>--}}
+        <div class="news-gallery-circle1"></div>
+        <div class="news-gallery-circle2"></div>
+        <div class="news-gallery-circle3"></div>
     </section>
 @endsection

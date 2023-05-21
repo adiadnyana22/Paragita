@@ -28,3 +28,11 @@ Route::get('/achievement', function () {
 Route::get('/coach', function () {
     return view('pages.coach');
 });
+
+Route::get('/news', function () {
+    return view('pages.news-list');
+});
+
+Route::get('/news/{id}', function () {
+    return view('pages.news-detail');
+});
