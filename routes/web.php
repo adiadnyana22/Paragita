@@ -36,3 +36,7 @@ Route::get('/news', function () {
 Route::get('/news/{id}', function () {
     return view('pages.news-detail');
 });
+
+Route::get('/admin', function () {
+    return view('admin-pages.dashboard');
+});
