@@ -20,45 +20,21 @@
             <section class="bg-news-list">
                 <div class="container">
                     <div class="news-list">
-                        <a href="#" class="news-list-card">
-                            <div class="news-list-img">
-                                <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="news-list-text">
-                                <span>06 March, 2023</span>
-                                <h2>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h2>
-                                <p>
-                                    Ratna Kusumaningrum Katamsi, atau yang dikenal dengan Aning Katamsi, merupakan Principal Conductor dan pelatih dari Paduan Suara Mahasiswa Universitas Indonesia (PSM UI)
-                                </p>
-                            </div>
-                        </a>
-                        <a href="#" class="news-list-card">
-                            <div class="news-list-img">
-                                <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="news-list-text">
-                                <span>06 March, 2023</span>
-                                <h2>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h2>
-                                <p>
-                                    Ratna Kusumaningrum Katamsi, atau yang dikenal dengan Aning Katamsi, merupakan Principal Conductor dan pelatih dari Paduan Suara Mahasiswa Universitas Indonesia (PSM UI)
-                                </p>
-                            </div>
-                        </a>
-                        <a href="#" class="news-list-card">
-                            <div class="news-list-img">
-                                <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="news-list-text">
-                                <span>06 March, 2023</span>
-                                <h2>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h2>
-                                <p>
-                                    Ratna Kusumaningrum Katamsi, atau yang dikenal dengan Aning Katamsi, merupakan Principal Conductor dan pelatih dari Paduan Suara Mahasiswa Universitas Indonesia (PSM UI)
-                                </p>
-                            </div>
-                        </a>
+                        @foreach($news as $new)
+                            <a href="#" class="news-list-card">
+                                <div class="news-list-img">
+                                    <img src="{{ asset('assets/images/news/'.$new->foto) }}" alt="News">
+                                    <div class="backdrop"></div>
+                                </div>
+                                <div class="news-list-text">
+                                    <span>{{ date("F j, Y", strtotime($new->tanggal)) }}</span>
+                                    <h2>{{ $new->judul }}</h2>
+                                    <p>
+                                        {{ $new->isi }}
+                                    </p>
+                                </div>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
             </section>

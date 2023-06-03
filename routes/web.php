@@ -25,13 +25,9 @@ Route::get('/achievement', function () {
     return view('pages.achievement');
 });
 
-Route::get('/coach', function () {
-    return view('pages.coach');
-});
+Route::get('/coach', [\App\Http\Controllers\CoachController::class, 'coach'])->name('coach');
 
-Route::get('/news', function () {
-    return view('pages.news-list');
-});
+Route::get('/news', [\App\Http\Controllers\NewsController::class, 'newsList'])->name('newsList');
 
 Route::get('/news/{id}', function () {
     return view('pages.news-detail');
