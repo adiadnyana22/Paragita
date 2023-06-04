@@ -28,6 +28,9 @@
             @endforeach
         </div>
         <div class="coach-list-body">
+            @php
+                $count = 1;
+            @endphp
             @foreach($coachList as $coach)
                 @if(($coachId && $coachId == $coach->id) || (!$coachId && $count == 1))
                     <h2>Aning Katamsi</h2>
@@ -38,6 +41,9 @@
                         <br><br>
                         Pada tahun 2008, ia meluncurkan buku "Klasik Indonesia" yang berisi kumpulan lagu Seriosa Indonesia karya Binsar Sitompul, F.X Sutopo, dan Mochtar Embut. Ia juga terlibat dalam beberapa proyek penerbitan buku, termasuk sebagai salah satu editor pada buku "Panduan Pelafalan Seriosa Indonesia" (2011) dan "Antologi Musik Klasik Indonesia" (2013) yang diterbitkan bersama Dewan Kesenian Jakarta. Dengan pengalaman dan kiprahnya di bidang musik klasik, Aning Katamsi telah memberikan kontribusi besar dalam pengembangan bakat musikal di Indonesia.
                     </p>
+                    @php
+                        $count += 1;
+                    @endphp
                 @endif
             @endforeach
         </div>

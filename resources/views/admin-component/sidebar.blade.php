@@ -35,7 +35,6 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Section</h6>
-                <a class="collapse-item" href="#">Judul</a>
                 <a class="collapse-item" href="#">Tentang Kami</a>
                 <a class="collapse-item" href="#">Penghargaan</a>
             </div>
@@ -55,7 +54,23 @@
                 <h6 class="collapse-header">Halaman</h6>
                 <a class="collapse-item" href="#">Paragita UI</a>
                 <a class="collapse-item" href="#">Pelatih</a>
-                <a class="collapse-item" href="#">Anggota</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+           aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-trophy"></i>
+            <span>Penghargaan</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Kategori</h6>
+                <a class="collapse-item" href="#">Tahun</a>
+                <a class="collapse-item" href="#">Penghargaan</a>
             </div>
         </div>
     </li>
@@ -65,13 +80,6 @@
         <a class="nav-link" href="#">
             <i class="fas fa-fw fa-newspaper"></i>
             <span>Berita</span></a>
-    </li>
-
-    <!-- Nav Item -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-trophy"></i>
-            <span>Penghargaan</span></a>
     </li>
 
     <!-- Nav Item -->

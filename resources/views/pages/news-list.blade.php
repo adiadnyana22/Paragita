@@ -21,7 +21,7 @@
                 <div class="container">
                     <div class="news-list">
                         @foreach($news as $new)
-                            <a href="#" class="news-list-card">
+                            <a href="{{ route('newsDetail', ['news' => $new->id]) }}" class="news-list-card">
                                 <div class="news-list-img">
                                     <img src="{{ asset('assets/images/news/'.$new->foto) }}" alt="News">
                                     <div class="backdrop"></div>
@@ -45,36 +45,18 @@
                     <h3>Berita Lainnya</h3>
                 </div>
                 <div class="other-news-list">
-                    <a class="other-news-card" href="#">
-                        <div class="other-news-image">
-                            <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                            <div class="backdrop"></div>
-                        </div>
-                        <div class="other-news-text">
-                            <p>06 March, 2023</p>
-                            <h3>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h3>
-                        </div>
-                    </a>
-                    <a class="other-news-card" href="#">
-                        <div class="other-news-image">
-                            <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                            <div class="backdrop"></div>
-                        </div>
-                        <div class="other-news-text">
-                            <p>06 March, 2023</p>
-                            <h3>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h3>
-                        </div>
-                    </a>
-                    <a class="other-news-card" href="#">
-                        <div class="other-news-image">
-                            <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                            <div class="backdrop"></div>
-                        </div>
-                        <div class="other-news-text">
-                            <p>06 March, 2023</p>
-                            <h3>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h3>
-                        </div>
-                    </a>
+                    @foreach($otherNews as $news)
+                        <a class="other-news-card" href="{{ route('newsDetail', ['news' => $news->id]) }}">
+                            <div class="other-news-image">
+                                <img src="{{ asset('assets/images/news/'.$news->foto) }}" alt="News">
+                                <div class="backdrop"></div>
+                            </div>
+                            <div class="other-news-text">
+                                <p>{{ date("F j, Y", strtotime($news->tanggal)) }}</p>
+                                <h3>{{ $news->judul }}</h3>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </section>

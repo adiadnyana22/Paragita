@@ -30,6 +30,19 @@
     color: var(--white-color);
 }
 
+.news-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: .7;
+    margin-bottom: 1rem;
+}
+
+.news-content-header a {
+    color: var(--white-color);
+
+}
+
 .bg-news-content h1 {
     color: var(--white-color);
     font-size: 3em;

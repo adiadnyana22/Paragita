@@ -17,319 +17,35 @@
         <div class="banner-achievement-link">
             <div class="container">
                 <ul>
-                    <li><a href="#2022">2022</a></li>
-                    <li><a href="#2020">2020</a></li>
-                    <li><a href="#2018">2018</a></li>
-                    <li><a href="#2014">2014</a></li>
-                    <li><a href="#2013">2013</a></li>
-                    <li><a href="#2012">2012</a></li>
-                    <li><a href="#2010">2010</a></li>
+                    @foreach($years as $year)
+                        <li><a href="#{{ $year->nama }}">{{ $year->nama }}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
         <section class="bg-achievement-list">
             <div class="container">
-                <div class="achievement-list-container" id="2022">
-                    <h2>2022</h2>
+                @foreach($years as $year)
+                <div class="achievement-list-container" id="{{ $year->nama }}">
+                    <h2>{{ $year->nama }}</h2>
                     <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
+                        @foreach($year->achievement as $achievement)
+                            <div class="achievement-list-card">
+                                <div class="achievement-list-image">
+                                    <img src="{{ asset('assets/images/achievement/'.$achievement->foto) }}" alt="Achievement Image">
+                                    <div class="backdrop"></div>
+                                </div>
+                                <div class="achievement-list-text">
+                                    <h3>{{ $achievement->judul }}</h3>
+                                    <p>
+                                        {{ $achievement->deskripsi }}
+                                    </p>
+                                </div>
                             </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <div class="achievement-list-container" id="2020">
-                    <h2>2020</h2>
-                    <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-list-container" id="2018">
-                    <h2>2018</h2>
-                    <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-list-container" id="2014">
-                    <h2>2014</h2>
-                    <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-list-container" id="2013">
-                    <h2>2013</h2>
-                    <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-list-container" id="2012">
-                    <h2>2012</h2>
-                    <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-list-container" id="2010">
-                    <h2>2010</h2>
-                    <div class="achievement-list-body">
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>The 10th International Brawijaya Choir Festival</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Lomba Paduan Suara Mahasiswa Nasional 2022</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="achievement-list-card">
-                            <div class="achievement-list-image">
-                                <img src="{{ asset('assets/images/achievementCardImage.png') }}" alt="Achievement Image">
-                                <div class="backdrop"></div>
-                            </div>
-                            <div class="achievement-list-text">
-                                <h3>Pesparawi Mahasiswa Nasional (PESPARAMANAS) XVII (Semarang, Indonesia)</h3>
-                                <p>
-                                    Gold Medal A Kategori Popular/Jazz/Gospel<br>
-                                    Best Conductor (Kristian Wirjadi)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
     </section>

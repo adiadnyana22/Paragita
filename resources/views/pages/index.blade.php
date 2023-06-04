@@ -11,15 +11,11 @@
 @section('content')
     <section class="bg-banner">
         <div class="main-carousel" data-flickity='{ "cellAlign": "left", "prevNextButtons": false, "autoPlay": 4000, "wrapAround": true }'>
-            <div class="carousel">
-                <img src="{{ asset('assets/images/banner1.png') }}" alt="Banner Image">
-            </div>
-            <div class="carousel">
-                <img src="{{ asset('assets/images/banner1.png') }}" alt="Banner Image">
-            </div>
-            <div class="carousel">
-                <img src="{{ asset('assets/images/banner1.png') }}" alt="Banner Image">
-            </div>
+            @foreach($carousels as $carousel)
+                <div class="carousel">
+                    <img src="{{ asset('assets/images/carousel/'.$carousel->foto) }}" alt="Banner Image">
+                </div>
+            @endforeach
         </div>
         <div class="banner-text">
             <div class="container">
@@ -42,9 +38,9 @@
                 <div class="about-text">
                     <h2>Tentang Kami,</h2>
                     <p>
-                        PSM UI Paragita adalah wadah bagi Mahasiswa UI yang sangat mengedepankan mutu dan kualitas dalam mengembangkan minat dan bakat di bidang berpaduan suara. Dengan fokus pada pengembangan bakat sumber daya yang dimilikinya, PSM UI Paragita telah meraih prestasi dan pencapaian yang membanggakan.
+                        {{ $about->value }}
                     </p>
-                    <a href="/coach">Learn more <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="{{ route('coach') }}">Learn more <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
         </div>
@@ -57,7 +53,7 @@
                     <h2>Penghargaan</h2>
                 </div>
                 <div class="achievement-btn">
-                    <a href="/achievement">Pelajari prestasi Paragita <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="{{ route('achievement') }}">Pelajari prestasi Paragita <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
             <div class="achievement-body">
@@ -67,25 +63,25 @@
                 <div class="achievement-text">
                     <div class="achievement-list">
                         <div class="achievement">
-                            <strong>128+</strong>
+                            <strong>{{ $achievements->value }}</strong>
                             <span>Achievements</span>
                         </div>
                         <div class="achievement">
-                            <strong>6+</strong>
+                            <strong>{{ $countries->value }}</strong>
                             <span>Countries</span>
                         </div>
                         <div class="achievement">
-                            <strong>18</strong>
+                            <strong>{{ $costumes->value }}</strong>
                             <span>Costumes</span>
                         </div>
                     </div>
                     <div class="achievement-list">
                         <div class="achievement">
-                            <strong>2</strong>
+                            <strong>{{ $coaches->value }}</strong>
                             <span>Coaches</span>
                         </div>
                         <div class="achievement">
-                            <strong>52</strong>
+                            <strong>{{ $choirMembers->value }}</strong>
                             <span>Choir Members</span>
                         </div>
                     </div>
@@ -102,40 +98,22 @@
                         <h2>Berita</h2>
                     </div>
                     <div class="news-btn">
-                        <a href="#">Read more news <i class='bx bx-right-arrow-alt'></i></a>
+                        <a href="{{ route('newsList') }}">Read more news <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
                 <div class="news-list">
-                    <a class="news-card" href="#">
-                        <div class="news-image">
-                            <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                            <div class="backdrop"></div>
-                        </div>
-                        <div class="news-text">
-                            <p>06 March, 2023</p>
-                            <h3>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h3>
-                        </div>
-                    </a>
-                    <a class="news-card" href="#">
-                        <div class="news-image">
-                            <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                            <div class="backdrop"></div>
-                        </div>
-                        <div class="news-text">
-                            <p>06 March, 2023</p>
-                            <h3>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h3>
-                        </div>
-                    </a>
-                    <a class="news-card" href="#">
-                        <div class="news-image">
-                            <img src="{{ asset('assets/images/news.png') }}" alt="News">
-                            <div class="backdrop"></div>
-                        </div>
-                        <div class="news-text">
-                            <p>06 March, 2023</p>
-                            <h3>The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing</h3>
-                        </div>
-                    </a>
+                    @foreach($news as $new)
+                        <a class="news-card" href="{{ route('newsDetail', ['news' => $new->id]) }}">
+                            <div class="news-image">
+                                <img src="{{ asset('assets/images/news/'.$new->foto) }}" alt="News">
+                                <div class="backdrop"></div>
+                            </div>
+                            <div class="news-text">
+                                <p>{{ date("F j, Y", strtotime($new->tanggal)) }}</p>
+                                <h3>{{ $new->judul }}</h3>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -148,18 +126,14 @@
             </div>
             <div class="gallery-body">
                 <div class="gallery-list">
-                    <img src="{{ asset('assets/images/news11.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news12.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news13.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news14.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news15.png') }}" alt="Gallery">
+                    @for($i = 0; $i < 5; $i++)
+                        <img src="{{ asset('assets/images/gallery/'.$gallery[$i]->foto) }}" alt="Gallery">
+                    @endfor
                 </div>
                 <div class="gallery-list">
-                    <img src="{{ asset('assets/images/news21.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news22.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news23.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news24.png') }}" alt="Gallery">
-                    <img src="{{ asset('assets/images/news25.png') }}" alt="Gallery">
+                    @for($i = 5; $i < 10; $i++)
+                        <img src="{{ asset('assets/images/gallery/'.$gallery[$i]->foto) }}" alt="Gallery">
+                    @endfor
                 </div>
             </div>
         </section>

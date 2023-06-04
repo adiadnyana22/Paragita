@@ -13,25 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Route::get('/home', function () {
-    return view('pages.index');
-});
-
-Route::get('/achievement', function () {
-    return view('pages.achievement');
-});
+Route::get('/achievement', [\App\Http\Controllers\AchievementController::class, 'achievements'])->name('achievement');
 
 Route::get('/coach', [\App\Http\Controllers\CoachController::class, 'coach'])->name('coach');
 
 Route::get('/news', [\App\Http\Controllers\NewsController::class, 'newsList'])->name('newsList');
 
-Route::get('/news/{id}', function () {
-    return view('pages.news-detail');
-});
+Route::get('/news/{news}', [\App\Http\Controllers\NewsController::class, 'newsDetail'])->name('newsDetail');
 
 Route::get('/admin', function () {
     return view('admin-pages.dashboard');
