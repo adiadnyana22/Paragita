@@ -113,7 +113,7 @@
     margin-bottom: 1rem;
 }
 
-.achievement-list-text p {
+.achievement-list-text ul li {
     color: var(--white-color);
     line-height: 1.8;
 }

@@ -37,9 +37,11 @@
                                 </div>
                                 <div class="achievement-list-text">
                                     <h3>{{ $achievement->judul }}</h3>
-                                    <p>
-                                        {{ $achievement->deskripsi }}
-                                    </p>
+                                    <ul>
+                                        @foreach(explode(',', $achievement->deskripsi) as $desc)
+                                            <li>{{ trim($desc) }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                         @endforeach

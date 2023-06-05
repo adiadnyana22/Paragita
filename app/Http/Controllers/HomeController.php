@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index() {
         $carousel = Carousel::all();
         $news = News::limit(3)->get();
-        $gallery = Gallery::limit(10)->get();
+        $gallery = Gallery::limit(7)->get();
 
         $about = Sysparam::where('nama', '=', 'about-short')->first();
         $achievements = Sysparam::where('nama', '=', 'achievements')->first();

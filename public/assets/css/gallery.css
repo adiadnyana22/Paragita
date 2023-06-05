@@ -1,0 +1,96 @@
+/* Banner */
+.bg-all-wrap {
+    position: relative;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.bg-banner-wrap {
+    background: url("/assets/images/awan.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-banner-news-list {
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+}
+
+.banner-news-list-title p {
+    color: var(--white-color);
+}
+
+.banner-news-list-title h1 {
+    color: var(--white-color);
+    font-size: 3em;
+    font-family: var(--font-highlight);
+    font-weight: 500;
+}
+
+.bg-gallery {
+    padding: 1rem 0 5rem;
+}
+
+.gallery-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.gallery-list img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.gallery-list img:nth-child(10n+1) {
+    grid-column: span 2;
+}
+
+.gallery-list img:nth-child(10n+7) {
+    grid-column: span 2;
+}
+
+/* Background */
+.background-circle1 {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    right: -50px;
+    top: 700px;
+    background: rgba(237, 184, 170, 0.5);
+    filter: blur(350px);
+    z-index: 1;
+}
+
+.background-circle2 {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    left: -200px;
+    top: 1100px;
+    background: #836DAF;
+    filter: blur(250px);
+    z-index: 1;
+}
+
+.background-circle3 {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    left: -400px;
+    top: 1500px;
+    background: #E089B5;
+    filter: blur(250px);
+    z-index: 1;
+}
+
+.bg-banner-wrap *, .bg-other-news *, footer * {
+    z-index: 2;
+    position: relative;
+}
+
+footer {
+    background: transparent !important;
+}

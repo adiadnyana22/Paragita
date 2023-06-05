@@ -118,22 +118,22 @@
             </div>
         </section>
         <section class="bg-gallery">
-            <div class="gallery-title">
-                <div class="container">
-                    <span>This is our recent activiy,</span>
-                    <h2>Galeri Foto</h2>
+            <div class="container">
+                <div class="gallery-title">
+                    <div class="container">
+                        <span>This is our recent activiy,</span>
+                        <h2>Galeri Foto</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-body">
-                <div class="gallery-list">
-                    @for($i = 0; $i < 5; $i++)
-                        <img src="{{ asset('assets/images/gallery/'.$gallery[$i]->foto) }}" alt="Gallery">
-                    @endfor
-                </div>
-                <div class="gallery-list">
-                    @for($i = 5; $i < 10; $i++)
-                        <img src="{{ asset('assets/images/gallery/'.$gallery[$i]->foto) }}" alt="Gallery">
-                    @endfor
+                <div class="gallery-body">
+                    <div class="gallery-list">
+                        @foreach($gallery as $gall)
+                            <img src="{{ asset('assets/images/gallery/'.$gall->foto) }}" alt="Gallery">
+                        @endforeach
+                    </div>
+                    <div class="gallery-btn">
+                        <a href="{{ route('gallery') }}">Lihat Lebih Banyak</a>
+                    </div>
                 </div>
             </div>
         </section>

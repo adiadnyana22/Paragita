@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('sysparams', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('value');
+            $table->string('value', 2000);
             $table->timestamps();
         });
     }

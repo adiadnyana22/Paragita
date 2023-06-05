@@ -73,14 +73,14 @@ class AchievementSeeder extends Seeder
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
-            'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
+            'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional, 5 Besar Pesparawi Mahasiswa Nasional, 2 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 7,
             'foto' => 'achievement.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
-            'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
+            'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional, 5 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 7,
             'foto' => 'achievement.png'
         ]);

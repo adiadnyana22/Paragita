@@ -126,7 +126,7 @@
     position: absolute;
     width: 1000px;
     height: 1000px;
-    left: 500px;
+    right: -50px;
     top: 700px;
     background: rgba(237, 184, 170, 0.5);
     filter: blur(350px);

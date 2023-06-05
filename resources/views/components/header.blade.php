@@ -7,7 +7,7 @@
                 <li><a href="{{ route('coach') }}">Tentang Kami <i class='bx bx-chevron-down' ></i></a></li>
                 <li><a href="{{ route('achievement') }}">Penghargaan</a></li>
                 <li><a href="{{ route('newsList') }}">Berita</a></li>
-                <li><a href="#">Galeri</a></li>
+                <li><a href="{{ route('gallery') }}">Galeri</a></li>
                 <li><a href="#" class="btn-highlight">Hubungi Kami</a></li>
             </ul>
         </nav>

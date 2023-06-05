@@ -23,6 +23,10 @@ Route::get('/news', [\App\Http\Controllers\NewsController::class, 'newsList'])->
 
 Route::get('/news/{news}', [\App\Http\Controllers\NewsController::class, 'newsDetail'])->name('newsDetail');
 
+Route::get('/about', [\App\Http\Controllers\AboutController::class, 'about'])->name('about');
+
+Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'gallery'])->name('gallery');
+
 Route::get('/admin', function () {
     return view('admin-pages.dashboard');
 });
