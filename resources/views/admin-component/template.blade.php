@@ -20,6 +20,9 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin-assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    @yield('page-style')
+
 </head>
 
 <body id="page-top">
@@ -96,9 +99,6 @@
 
 <!-- Custom scripts for all pages-->
 <script src="{{ asset('admin-assets/js/sb-admin-2.min.js') }}"></script>
-
-<!-- Page level plugins -->
-<script src="{{ asset('admin-assets/vendor/chart.js/Chart.min.js') }}"></script>
 
 <!-- Page level custom scripts -->
 @yield('page-script')

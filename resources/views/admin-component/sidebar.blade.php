@@ -12,7 +12,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('adminDashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -27,46 +27,44 @@
 
     <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-           aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+           aria-expanded="true" aria-controls="collapseOne">
             <i class="fas fa-fw fa-home"></i>
             <span>Beranda</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Section</h6>
-                <a class="collapse-item" href="#">Tentang Kami</a>
-                <a class="collapse-item" href="#">Penghargaan</a>
+                <a class="collapse-item" href="{{ route('adminHomeAbout') }}">Tentang Kami</a>
+                <a class="collapse-item" href="{{ route('adminHomeAchievement') }}">Penghargaan</a>
             </div>
         </div>
     </li>
 
     <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-           aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+           aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-music"></i>
             <span>Tentang Kami</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-             data-parent="#accordionSidebar">
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Halaman</h6>
-                <a class="collapse-item" href="#">Paragita UI</a>
-                <a class="collapse-item" href="#">Pelatih</a>
+                <a class="collapse-item" href="{{ route('adminAboutAbout') }}">Paragita UI</a>
+                <a class="collapse-item" href="{{ route('adminAboutCoach') }}">Pelatih</a>
             </div>
         </div>
     </li>
 
     <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-           aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+           aria-expanded="true" aria-controls="collapseThree">
             <i class="fas fa-fw fa-trophy"></i>
             <span>Penghargaan</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-             data-parent="#accordionSidebar">
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Kategori</h6>
                 <a class="collapse-item" href="#">Tahun</a>

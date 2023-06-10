@@ -27,6 +27,18 @@ Route::get('/about', [\App\Http\Controllers\AboutController::class, 'about'])->n
 
 Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'gallery'])->name('gallery');
 
-Route::get('/admin', function () {
-    return view('admin-pages.dashboard');
-});
+Route::get('/admin/dashboard', [\App\Http\Controllers\AdminDashbordController::class, 'dashboard'])->name('adminDashboard');
+
+Route::get('/admin/home-about', [\App\Http\Controllers\AdminHomeController::class, 'aboutPage'])->name('adminHomeAbout');
+
+Route::post('/api/home-about', [\App\Http\Controllers\AdminHomeController::class, 'aboutMethod'])->name('adminHomeAboutMethod');
+
+Route::get('/admin/home-achievement', [\App\Http\Controllers\AdminHomeController::class, 'achievementPage'])->name('adminHomeAchievement');
+
+Route::post('/api/home-achievement', [\App\Http\Controllers\AdminHomeController::class, 'achievementMethod'])->name('adminHomeAchievementMethod');
+
+Route::get('/admin/about-about', [\App\Http\Controllers\AdminAboutController::class, 'aboutPage'])->name('adminAboutAbout');
+
+Route::post('/api/about-about', [\App\Http\Controllers\AdminAboutController::class, 'aboutMethod'])->name('adminAboutAboutMethod');
+
+Route::get('/admin/about-coach', [\App\Http\Controllers\AdminAboutController::class, 'coachListPage'])->name('adminAboutCoach');
