@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carousel;
 use App\Models\Sysparam;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AdminHomeController extends Controller
 {
@@ -70,5 +72,42 @@ class AdminHomeController extends Controller
         $choirMembers->save();
 
         return redirect()->route('adminHomeAchievement');
+    }
+
+    public function bannerListPage() {
+        $carousels = Carousel::all();
+
+        return view('admin-pages.home-banner')->with('carousels', $carousels);
+    }
+
+    public function bannerAddPage() {
+        return view('admin-pages.home-banner-add');
+    }
+
+    public function bannerAddMethod(Request $request) {
+        $validateReq = $request->validate([
+            'foto' => 'required|image|file|mimes:jpeg,jpg,png|max:2048',
+        ]);
+
+        $carousel = new Carousel();
+
+        $file = $request->file('foto');
+        $filename = Str::upper(Str::random(16)).'.'.$file->getClientOriginalExtension();
+        $file->move('assets/images/carousel', $filename);
+        $carousel->foto = $filename;
+
+        $carousel->save();
+
+        return redirect()->route('adminHomeCarousel');
+    }
+
+    public function bannerDetailPage(Carousel $carousel) {
+        return view('admin-pages.home-banner-detail')->with('carousel', $carousel);
+    }
+
+    public function bannerDeleteMethod(Carousel $carousel) {
+        $carousel->delete();
+
+        return redirect()->route('adminHomeCarousel');
     }
 }

@@ -11,7 +11,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('adminDashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -35,6 +35,7 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Section</h6>
+                <a class="collapse-item" href="{{ route('adminHomeCarousel') }}">Banner</a>
                 <a class="collapse-item" href="{{ route('adminHomeAbout') }}">Tentang Kami</a>
                 <a class="collapse-item" href="{{ route('adminHomeAchievement') }}">Penghargaan</a>
             </div>
@@ -67,8 +68,8 @@
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Kategori</h6>
-                <a class="collapse-item" href="#">Tahun</a>
-                <a class="collapse-item" href="#">Penghargaan</a>
+                <a class="collapse-item" href="{{ route('adminAchievementYear') }}">Tahun</a>
+                <a class="collapse-item" href="{{ route('adminAchievementAchievement') }}">Penghargaan</a>
             </div>
         </div>
     </li>
@@ -82,7 +83,7 @@
 
     <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('adminGallery') }}">
             <i class="fas fa-fw fa-image"></i>
             <span>Galeri</span></a>
     </li>

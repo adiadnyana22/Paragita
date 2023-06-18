@@ -20,7 +20,7 @@
                 </div>
                 <h1>{{ $news->judul }}</h1>
                 <p>
-                    {{ $news->isi }}
+                    {!! $news->isi !!}
                 </p>
 {{--                <p>--}}
 {{--                    Ratna Kusumaningrum Katamsi, atau yang dikenal dengan Aning Katamsi, merupakan Principal Conductor dan pelatih dari Paduan Suara Mahasiswa Universitas Indonesia (PSM UI) Paragita. Bakat musiknya sudah diasah sejak kecil oleh ibunya, Pranawengrum Katamsi, yang merupakan soprano terkemuka di Indonesia. Ia kemudian melanjutkan pendidikan vokalnya di Sekolah Musik Yayasan Pendidikan Musik (YPM) dengan bimbingan dari beberapa guru terkemuka, antara lain Catharina W. Leimena dan Lee Alison Sibley.--}}

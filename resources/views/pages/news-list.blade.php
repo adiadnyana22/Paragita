@@ -30,7 +30,7 @@
                                     <span>{{ date("F j, Y", strtotime($new->tanggal)) }}</span>
                                     <h2>{{ $new->judul }}</h2>
                                     <p>
-                                        {{ $new->isi }}
+                                        {{ strip_tags($new->isi) }}
                                     </p>
                                 </div>
                             </a>

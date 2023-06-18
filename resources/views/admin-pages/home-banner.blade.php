@@ -1,6 +1,6 @@
 @extends('admin-component.template')
 
-@section('title', 'Paragita About Coach')
+@section('title', 'Paragita Home Banner')
 
 @section('page-style')
     <link href="{{ asset(asset('admin-assets/vendor/datatables/dataTables.bootstrap4.min.css')) }}" rel="stylesheet">
@@ -9,14 +9,14 @@
 @section('content')
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tentang Kami</h1>
+        <h1 class="h3 mb-0 text-gray-800">Beranda</h1>
     </div>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-            <h6 class="m-0 font-weight-bold text-primary">Coaches</h6>
-            <a href="{{ route('adminAboutCoachAdd') }}" class="btn btn-primary btn-md">Tambah</a>
+            <h6 class="m-0 font-weight-bold text-primary">Banner</h6>
+            <a href="{{ route('adminHomeCarouselAdd') }}" class="btn btn-primary btn-md">Tambah</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -24,16 +24,14 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
-                            <th>Deskripsi</th>
+                            <th>Foto</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
-                            <th>Deskripsi</th>
+                            <th>Foto</th>
                             <th>Aksi</th>
                         </tr>
                     </tfoot>
@@ -41,19 +39,17 @@
                         @php
                             $count = 1;
                         @endphp
-                        @foreach($coaches as $coach)
+                        @foreach($carousels as $carousel)
                             <tr>
                                 <td>{{ $count++ }}</td>
-                                <td>{{ $coach->nama }}</td>
-                                <td>{{ (\Illuminate\Support\Str::length($coach->deskripsi) > 300) ? \Illuminate\Support\Str::substr($coach->deskripsi, 0, 300).'...' : $coach->deskripsi }}</td>
+                                <td><img src="{{ asset('assets/images/carousel/'.$carousel->foto) }}" alt="Carousel" height="150px"></td>
                                 <td class="d-flex flex-wrap" style="gap: .5rem">
-                                    <form method="POST" action="{{ route('adminAboutCoachDeleteMethod', $coach->id) }}">
+                                    <form method="POST" action="{{ route('adminHomeCarouselDeleteMethod', $carousel->id) }}">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-danger btn-sm del">Delete</button>
                                     </form>
-                                    <a href="{{ route('adminAboutCoachEdit', $coach->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="{{ route('adminAboutCoachDetail', $coach->id) }}" class="btn btn-info btn-sm">Detail</a>
+                                    <a href="{{ route('adminHomeCarouselDetail', $carousel->id) }}" class="btn btn-info btn-sm">Detail</a>
                                 </td>
                             </tr>
                         @endforeach
