@@ -76,7 +76,7 @@
 
     <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('adminNews') }}">
             <i class="fas fa-fw fa-newspaper"></i>
             <span>Berita</span></a>
     </li>
@@ -89,19 +89,19 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+{{--    <hr class="sidebar-divider">--}}
 
     <!-- Heading -->
-    <div class="sidebar-heading">
-        Admin
-    </div>
+{{--    <div class="sidebar-heading">--}}
+{{--        Admin--}}
+{{--    </div>--}}
 
     <!-- Nav Item -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-user"></i>
-            <span>User</span></a>
-    </li>
+{{--    <li class="nav-item">--}}
+{{--        <a class="nav-link" href="#">--}}
+{{--            <i class="fas fa-fw fa-user"></i>--}}
+{{--            <span>User</span></a>--}}
+{{--    </li>--}}
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
