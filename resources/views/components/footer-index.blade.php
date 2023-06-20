@@ -11,11 +11,11 @@
                 <div class="footer-head-section">
                     <p>
                         Ada pertanyaan
-                        <span>admin@paragita.ui.ad</span>
+                        <a href="mailto:admin@paragita.ui.ad">admin@paragita.ui.ad</a>
                     </p>
                     <p>
                         Telepon Kami
-                        <span>0852-1614-7761 (Risa)</span>
+                        <a href="https://wa.me/081246868369" target="_blank">0852-1614-7761 (Risa)</a>
                     </p>
                 </div>
                 <div class="footer-head-section">
@@ -23,7 +23,7 @@
                     <p>
                         Gedung Pusat Kegiatan Mahasiswa Baru (PUSGIWA UI) Jl. Prof. Dr. Fuad Hassan, Kukusan, Beji, Depok, Indonesia
                     </p>
-                    <a href="#">Lihat Peta</a>
+                    <a href="https://goo.gl/maps/b4VM7QkSh22eNcyW8" target="_blank">Lihat Peta</a>
                 </div>
             </div>
         </div>

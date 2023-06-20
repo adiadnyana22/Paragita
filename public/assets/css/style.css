@@ -26,13 +26,56 @@ header nav ul li a {
     color: var(--white-color);
     text-decoration: none;
     font-size: .9em;
+    transition: .3s;
+    padding: 1rem 0;
+}
+
+header nav ul li > a:hover {
+    color: #bcbcbc;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: flex;
+}
+
+.nav-dropdown-content {
+    width: 175px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--white-color);
+    display: none;
+    flex-direction: column;
+    margin-top: .75rem;
+    border-radius: .25rem;
+}
+
+.nav-dropdown-content a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--black-color);
+}
+
+.nav-dropdown-content a:hover {
+    font-weight: bold;
 }
 
 .btn-highlight {
     border-radius: .5rem;
     background-color: var(--white-color);
     color: var(--black-color);
+    border: 1px solid var(--white-color);
     padding: .75rem 1.5rem;
+    transition: .5s;
+}
+
+.btn-highlight:hover {
+    background-color: transparent;
+    color: var(--white-color);
 }
 
 /* Footer */
@@ -83,6 +126,11 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    transition: .5s;
+}
+
+.footer-link a:hover {
+    background-color: #ababab;
 }
 
 
@@ -115,18 +163,31 @@ header nav ul li a {
     margin-bottom: 2rem;
 }
 
-.footer-head-section p span {
+.footer-head-section p a {
     display: block;
     font-size: 1.5em;
     font-weight: 500;
     font-family: var(--font-highlight);
     line-height: 1.5;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: .5s;
 }
 
-.footer-head-section a {
+.footer-head-section p a:hover {
+    color: #ababab;
+}
+
+.footer-head-section > a {
     text-decoration: none;
     color: var(--white-color);
     border-radius: 2.5rem;
     padding: .75rem 2rem;
     border: 1px solid var(--white-color);
+    transition: .5s;
+}
+
+.footer-head-section > a:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
 }

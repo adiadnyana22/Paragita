@@ -40,7 +40,7 @@
                     <p>
                         {{ $about->value }}
                     </p>
-                    <a href="{{ route('coach') }}">Learn more <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="{{ route('about') }}">Learn more <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
         </div>

@@ -317,6 +317,11 @@
     gap: 1rem;
     text-decoration: none;
     margin-bottom: .5rem;
+    transition: .5s;
+}
+
+.news-btn a:hover {
+    gap: 2rem;
 }
 
 .news-list {
