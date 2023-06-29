@@ -31,8 +31,30 @@
     display: flex;
     gap: 1rem;
     list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 2rem;
+    padding: 1.5rem 0 1rem;
+    overflow: auto;
+}
+
+/* total width */
+.banner-achievement-link ul::-webkit-scrollbar {
+    background-color: transparent;
+    height: .5rem;
+}
+
+/* background of the scrollbar except button or resizer */
+.banner-achievement-link ul::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* scrollbar itself */
+.banner-achievement-link ul::-webkit-scrollbar-thumb {
+    background-color: rgb(186, 186, 192, 0.1);
+    border-radius: 1rem;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.banner-achievement-link ul::-webkit-scrollbar-button {
+    display:none;
 }
 
 .banner-achievement-link ul li a {
@@ -42,6 +64,7 @@
     padding: .5rem 1.5rem;
     border-radius: 2rem;
     transition: .5s;
+    display: block;
 }
 
 .banner-achievement-link ul li a:hover {
@@ -116,4 +139,30 @@
 .achievement-list-text ul li {
     color: var(--white-color);
     line-height: 1.8;
+}
+
+@media(max-width: 1200px) {
+    .achievement-list-body {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media(max-width: 990px) {
+    .banner-achievement-title h1 {
+        font-size: 2em;
+    }
+
+    .achievement-list-card {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .achievement-list-image {
+        width: 100%;
+    }
+
+    .achievement-list-image img {
+        width: 100%;
+    }
 }

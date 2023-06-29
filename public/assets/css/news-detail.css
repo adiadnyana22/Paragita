@@ -155,11 +155,27 @@
     z-index: 1;
 }
 
-.bg-banner-wrap *, .bg-other-news *, footer * {
+.bg-news-content *, .bg-other-news *, footer * {
     z-index: 2;
     position: relative;
 }
 
 footer {
     background: transparent !important;
+}
+
+@media(max-width: 990px) {
+    .news-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+
+    .bg-news-content h1 {
+        font-size: 2em;
+    }
+
+    .other-news-list {
+        grid-template-columns: 1fr;
+    }
 }

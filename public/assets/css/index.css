@@ -459,3 +459,81 @@
     background-color: var(--white-color);
     color: var(--black-color);
 }
+
+@media(max-width: 1200px) {
+    .about-image img {
+        margin: 0 3rem;
+    }
+
+    .about-text {
+        padding: 4rem 6rem;
+    }
+}
+
+@media(max-width: 990px) {
+    .achievement-title h2 {
+        font-size: 2em;
+    }
+
+    .achievement-body {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement strong {
+        font-size: 2em;
+    }
+
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-head-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 768px) {
+    .banner-title p {
+        font-size: 1em;
+    }
+
+    .banner-title h1 {
+        font-size: 2em;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-text {
+        padding: 3rem 4rem;
+    }
+
+    .about-text h2 {
+        font-size: 2em;
+    }
+
+    .achievement-head {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .news-head {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gallery-list {
+        grid-template-rows: repeat(4, 150px);
+    }
+}
+
+@media(max-width: 425px) {
+    .achievement-list {
+        gap: .5rem;
+    }
+}
