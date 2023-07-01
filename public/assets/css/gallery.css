@@ -38,17 +38,21 @@
     gap: 1.25rem;
 }
 
+.gallery-list a {
+    display: block;
+}
+
 .gallery-list img {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
 
-.gallery-list img:nth-child(10n+1) {
+.gallery-list a:nth-child(10n+1) {
     grid-column: span 2;
 }
 
-.gallery-list img:nth-child(10n+7) {
+.gallery-list a:nth-child(10n+7) {
     grid-column: span 2;
 }
 

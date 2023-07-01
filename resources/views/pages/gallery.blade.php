@@ -4,6 +4,10 @@
 
 @section('pageHeadExtention')
     <link rel="stylesheet" href="{{ asset('assets/css/gallery.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
 @endsection
 
 @section('content')
@@ -21,7 +25,9 @@
                 <div class="container">
                     <div class="gallery-list">
                         @foreach($gallery as $gal)
-                            <img src="{{ asset('assets/images/gallery/'.$gal->foto) }}" alt="Gallery">
+                            <a data-src="{{ asset('assets/images/gallery/'.$gal->foto) }}" data-fancybox="gallery">
+                                <img src="{{ asset('assets/images/gallery/'.$gal->foto) }}" alt="Gallery">
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -31,4 +37,10 @@
         <div class="background-circle2"></div>
         <div class="background-circle3"></div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+
+        });
+    </script>
 @endsection
