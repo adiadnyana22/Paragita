@@ -14,7 +14,7 @@
                 <li><a href="{{ route('achievement') }}">Penghargaan</a></li>
                 <li><a href="{{ route('newsList') }}">Berita</a></li>
                 <li><a href="{{ route('gallery') }}">Galeri</a></li>
-                <li><a href="https://wa.me/081246868369" target="_blank" class="btn-highlight">Hubungi Kami</a></li>
+                <li><a href="https://wa.me/6285216147761" target="_blank" class="btn-highlight">Hubungi Kami</a></li>
             </ul>
             <ul id="nav-mobile">
                 <li><a href="#" id="burger-btn"><i class='bx bx-menu-alt-right' ></i></a></li>

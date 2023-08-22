@@ -15,7 +15,7 @@
                     </p>
                     <p>
                         Telepon Kami
-                        <a href="https://wa.me/081246868369" target="_blank">0852-1614-7761 (Risa)</a>
+                        <a href="https://wa.me/6285216147761" target="_blank">0852-1614-7761 (Risa)</a>
                     </p>
                 </div>
                 <div class="footer-head-section">
@@ -40,7 +40,7 @@
                 <a href="#"><i class='bx bxl-facebook'></i></a>
                 <a href="#"><i class='bx bxl-instagram' ></i></a>
                 <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://wa.me/6285216147761" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
                 <a href="#"><i class='bx bxl-youtube' ></i></a>
             </div>
         </div>
