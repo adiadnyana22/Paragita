@@ -90,6 +90,47 @@
         </div>
     </section>
     <section class="bg-news-gallery">
+        <section class="bg-ticket" id="ticket">
+            <div class="container">
+                <div class="ticket-head">
+                    <div class="ticket-title">
+                        <span>PSM UI Paragita’s Upcoming Event</span>
+                        <h2>Informasi Event</h2>
+                    </div>
+                </div>
+                <div class="ticket-list">
+                    @php
+                        $count = 1;
+                    @endphp
+                    @foreach ($ticket as $tick)
+                    <div class="ticket-card" style="{{ $count == 1 ? 'background-color: var(--black-color);' : '' }}">
+                        <div class="ticket-image">
+                            <img src="{{ asset('assets/images/ticket/'.$tick->foto) }}" alt="Ticket">
+                        </div>
+                        <div class="ticket-text">
+                            <div class="ticket-text-detail">
+                                <span>{{ date("l, j F Y", strtotime($tick->tanggal)) }}</span>
+                                <h3>{{ $tick->judul }}</h3>
+                                <p>
+                                    {{ $tick->deskripsi }}
+                                </p>
+                            </div>
+                            <div class="ticket-text-button">
+                                @if ($tick->link)
+                                <a href="{{ $tick->link }}" target="_blank">Beli Tiket <i class='bx bx-right-arrow-alt'></i></a>
+                                @else
+                                <span>Coming Soon!</span>
+                                @endif
+                            </div>
+                        </div>
+                        @php
+                            $count++;
+                        @endphp
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
         <section class="bg-news">
             <div class="container">
                 <div class="news-head">

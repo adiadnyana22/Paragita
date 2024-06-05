@@ -23,7 +23,10 @@ class DatabaseSeeder extends Seeder
             GallerySeeder::class,
             NewsSeeder::class,
             SysparamSeeder::class,
-            YearSeeder::class
+            YearSeeder::class,
+            TicketSeeder::class,
+            LabelSeeder::class,
+            MerchandiseSeeder::class
         ]);
 
         User::create([

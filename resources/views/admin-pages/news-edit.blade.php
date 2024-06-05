@@ -27,7 +27,7 @@
                     @error('isi')<p class="text-danger mt-1">{{ $message }}</p>@enderror
                 </div>
                 <div class="mb-3">
-                    <img src="{{ asset('assets/images/news/'.$news->foto) }}" alt="Coach" class="w-25 d-block mb-2">
+                    <img src="{{ asset('assets/images/news/'.$news->foto) }}" alt="News" class="w-25 d-block mb-2">
                     <label class="form-label">Foto <b>(File tidak perlu diisi jika foto tidak ingin diubah)</b></label>
                     <input type="file" class="form-control" name="foto" id="foto" accept=".png,.jpg,.jpeg">
                     @error('foto')<p class="text-danger mt-1">{{ $message }}</p>@enderror

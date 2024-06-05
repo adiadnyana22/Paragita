@@ -20,6 +20,8 @@ Route::get('/news', [\App\Http\Controllers\NewsController::class, 'newsList'])->
 Route::get('/news/{news}', [\App\Http\Controllers\NewsController::class, 'newsDetail'])->name('newsDetail');
 Route::get('/about', [\App\Http\Controllers\AboutController::class, 'about'])->name('about');
 Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'gallery'])->name('gallery');
+Route::get('/merchandise', [\App\Http\Controllers\MerchandiseController::class, 'merchandise'])->name('merchandise');
+Route::get('/api/merchandise', [\App\Http\Controllers\MerchandiseController::class, 'merchandiseAPI'])->name('merchandiseAPI');
 
 Route::middleware(['isUser'])->group(function () {
     Route::get('/login', [\App\Http\Controllers\AuthController::class, 'loginPage'])->name('loginPage');
@@ -76,6 +78,31 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get('/admin/news/edit/{news}', [\App\Http\Controllers\AdminNewsController::class, 'newsEditPage'])->name('adminNewsEdit');
     Route::put('/api/news/edit/{news}', [\App\Http\Controllers\AdminNewsController::class, 'newsEditMethod'])->name('adminNewsEditMethod');
     Route::delete('/api/news/delete/{news}', [\App\Http\Controllers\AdminNewsController::class, 'newsDeleteMethod'])->name('adminNewsDeleteMethod');
+
+    Route::get('/admin/event', [\App\Http\Controllers\AdminEventController::class, 'eventListPage'])->name('adminEvent');
+    Route::get('/admin/event/detail/{event}', [\App\Http\Controllers\AdminEventController::class, 'eventDetailPage'])->name('adminEventDetail');
+    Route::get('/admin/event/add', [\App\Http\Controllers\AdminEventController::class, 'eventAddPage'])->name('adminEventAdd');
+    Route::post('/api/event/add', [\App\Http\Controllers\AdminEventController::class, 'eventAddMethod'])->name('adminEventAddMethod');
+    Route::get('/admin/event/edit/{event}', [\App\Http\Controllers\AdminEventController::class, 'eventEditPage'])->name('adminEventEdit');
+    Route::put('/api/event/edit/{event}', [\App\Http\Controllers\AdminEventController::class, 'eventEditMethod'])->name('adminEventEditMethod');
+    Route::delete('/api/event/delete/{event}', [\App\Http\Controllers\AdminEventController::class, 'eventDeleteMethod'])->name('adminEventDeleteMethod');
+
+    Route::get('/admin/merch-infor', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchInfoPage'])->name('adminMerchInfo');
+    Route::post('/api/merch-info', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchInfoMethod'])->name('adminMerchInfoMethod');
+    Route::get('/admin/merch-label', [\App\Http\Controllers\AdminMerchandiseController::class, 'labelListPage'])->name('adminMerchLabel');
+    Route::get('/admin/merch-label/add', [\App\Http\Controllers\AdminMerchandiseController::class, 'labelAddPage'])->name('adminMerchLabelAdd');
+    Route::post('/api/merch-label/add', [\App\Http\Controllers\AdminMerchandiseController::class, 'labelAddMethod'])->name('adminMerchLabelAddMethod');
+    Route::get('/admin/merch-label/edit/{label}', [\App\Http\Controllers\AdminMerchandiseController::class, 'labelEditPage'])->name('adminMerchLabelEdit');
+    Route::put('/api/merch-label/edit/{label}', [\App\Http\Controllers\AdminMerchandiseController::class, 'labelEditMethod'])->name('adminMerchLabelEditMethod');
+    Route::delete('/api/merch-label/delete/{label}', [\App\Http\Controllers\AdminMerchandiseController::class, 'labelDeleteMethod'])->name('adminMerchLabelDeleteMethod');
+    Route::get('/admin/merch-product', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseListPage'])->name('adminMerchProduct');
+    Route::get('/admin/merch-product/detail/{merchandise}', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseDetailPage'])->name('adminMerchProductDetail');
+    Route::get('/admin/merch-product/add', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseAddPage'])->name('adminMerchProductAdd');
+    Route::post('/api/merch-product/add', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseAddMethod'])->name('adminMerchProductAddMethod');
+    Route::get('/admin/merch-product/edit/{merchandise}', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseEditPage'])->name('adminMerchProductEdit');
+    Route::put('/api/merch-product/edit/{merchandise}', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseEditMethod'])->name('adminMerchProductEditMethod');
+    Route::delete('/api/merch-product/delete/{merchandise}', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseDeleteMethod'])->name('adminMerchProductDeleteMethod');
+    Route::post('/api/merch-product/toggle', [\App\Http\Controllers\AdminMerchandiseController::class, 'merchandiseToggleAPI'])->name('merchToggleAPI');
 
     Route::post('/api/logout', [\App\Http\Controllers\AuthController::class, 'logoutMethod'])->name('logoutMethod');
 });

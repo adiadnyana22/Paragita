@@ -19,70 +19,70 @@ class AchievementSeeder extends Seeder
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 1,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement1.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 1,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement2.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 2,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement3.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 3,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement4.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 3,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement5.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 4,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement6.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 5,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement7.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 6,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement8.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional, 5 Besar Pesparawi Mahasiswa Nasional, 2 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 7,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement9.png'
         ]);
 
         Achievement::create([
             'judul' => 'The 10th International Brawijaya Choir Festival ',
             'deskripsi' => '10 Besar Pesparawi Mahasiswa Nasional, 5 Besar Pesparawi Mahasiswa Nasional',
             'year_id' => 7,
-            'foto' => 'achievement.png'
+            'foto' => 'achievement10.png'
         ]);
     }
 }

@@ -20,15 +20,15 @@ class CarouselSeeder extends Seeder
         ]);
 
         Carousel::create([
-            'foto' => 'carousel1.png',
+            'foto' => 'carousel2.png',
         ]);
 
         Carousel::create([
-            'foto' => 'carousel1.png',
+            'foto' => 'carousel3.png',
         ]);
 
         Carousel::create([
-            'foto' => 'carousel1.png',
+            'foto' => 'carousel4.png',
         ]);
     }
 }

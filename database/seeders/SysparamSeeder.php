@@ -49,5 +49,20 @@ class SysparamSeeder extends Seeder
             'nama' => 'choir-members',
             'value' => '52'
         ]);
+
+        Sysparam::create([
+            'nama' => 'merch-caption',
+            'value' => 'Anak Jaksel: The Musikal!'
+        ]);
+
+        Sysparam::create([
+            'nama' => 'merch-title',
+            'value' => 'Special Merchandise'
+        ]);
+
+        Sysparam::create([
+            'nama' => 'merch-description',
+            'value' => 'Hanya sampai 20 April - 29 May 2024'
+        ]);
     }
 }

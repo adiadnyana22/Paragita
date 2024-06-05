@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class AdminGalleryController extends Controller
@@ -40,6 +41,7 @@ class AdminGalleryController extends Controller
     }
 
     public function galleryDeleteMethod(Gallery $gallery) {
+        File::delete('assets/images/gallery/'.$gallery->foto);
         $gallery->delete();
 
         return redirect()->route('adminGallery');

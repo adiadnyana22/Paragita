@@ -72,7 +72,7 @@ class AdminNewsController extends Controller
     }
 
     public function newsDeleteMethod(News $news) {
-        File::delete('assets/images/coach/'.$news->foto);
+        File::delete('assets/images/news/'.$news->foto);
         $news->delete();
 
         return redirect()->route('adminNews');

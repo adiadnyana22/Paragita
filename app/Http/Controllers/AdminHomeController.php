@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Carousel;
 use App\Models\Sysparam;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class AdminHomeController extends Controller
@@ -106,6 +107,7 @@ class AdminHomeController extends Controller
     }
 
     public function bannerDeleteMethod(Carousel $carousel) {
+        File::delete('assets/images/carousel/'.$carousel->foto);
         $carousel->delete();
 
         return redirect()->route('adminHomeCarousel');

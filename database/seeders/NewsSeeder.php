@@ -27,14 +27,14 @@ class NewsSeeder extends Seeder
             'judul' => 'The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing',
             'isi' => 'lorem',
             'tanggal' => '2023-06-03',
-            'foto' => 'news1.png'
+            'foto' => 'news2.png'
         ]);
 
         News::create([
             'judul' => 'The Resonanz Children’s Choir Raih Juara European Grand Prix in Choral Singing',
             'isi' => 'lorem',
             'tanggal' => '2023-06-03',
-            'foto' => 'news1.png'
+            'foto' => 'news3.png'
         ]);
     }
 }

@@ -122,6 +122,7 @@ class AdminAchievementController extends Controller
     }
 
     public function achievementDeleteMethod(Achievement $achievement) {
+        File::delete('assets/images/achievement/'.$achievement->foto);
         $achievement->delete();
 
         return redirect()->route('adminAchievementAchievement');

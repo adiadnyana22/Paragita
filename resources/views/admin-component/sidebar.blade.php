@@ -88,6 +88,30 @@
             <span>Galeri</span></a>
     </li>
 
+    <!-- Nav Item -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('adminEvent') }}">
+            <i class="fas fa-fw fa-calendar"></i>
+            <span>Event</span></a>
+    </li>
+
+    <!-- Nav Item -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+           aria-expanded="true" aria-controls="collapseFour">
+            <i class="fas fa-fw fa-tag"></i>
+            <span>Merchandise</span>
+        </a>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Kategori</h6>
+                <a class="collapse-item" href="{{ route('adminMerchInfo') }}">Informasi Halaman</a>
+                <a class="collapse-item" href="{{ route('adminMerchLabel') }}">Label Produk</a>
+                <a class="collapse-item" href="{{ route('adminMerchProduct') }}">Produk</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Divider -->
 {{--    <hr class="sidebar-divider">--}}
 
