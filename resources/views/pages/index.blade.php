@@ -41,6 +41,7 @@
                         {{ $about->value }}
                     </p>
                     <a href="{{ route('about') }}">Learn more <i class='bx bx-right-arrow-alt'></i></a>
+                    <div class="about-pattern1"></div>
                 </div>
             </div>
         </div>
@@ -181,5 +182,8 @@
         <div class="news-gallery-circle1"></div>
         <div class="news-gallery-circle2"></div>
         <div class="news-gallery-circle3"></div>
+        <div class="news-gallery-pattern1"></div>
+        <div class="news-gallery-pattern2"></div>
+        <div class="news-gallery-pattern3"></div>
     </section>
 @endsection

@@ -57,5 +57,6 @@
         <div class="background-circle1"></div>
         <div class="background-circle2"></div>
         <div class="background-circle3"></div>
+        <div class="background-circle-pattern1"></div>
     </section>
 @endsection

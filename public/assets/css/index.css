@@ -109,13 +109,26 @@
 }
 
 .about-text {
-    background: linear-gradient(105.8deg, #423453 10.04%, #836DAF 61.41%, rgba(237, 184, 170, 0.98) 104.87%);
+    background: linear-gradient(135.8deg, #0677BB 50.04%, #D6CCA8 101.41%);
     backdrop-filter: blur(40px);
     padding: 4rem 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-pattern1 {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    right: 00px;
+    bottom: -500px;
+    background: url("/assets/images/pattern.png");
+    background-size: cover;
+    z-index: 0;
 }
 
 .about-text h2 {
@@ -382,7 +395,7 @@
 }
 
 .news-gallery-circle1 {
-    background-color: #E089B5;
+    background-color: #D6CCA8;
     width: 1000px;
     height: 1000px;
     position: absolute;
@@ -393,7 +406,7 @@
 }
 
 .news-gallery-circle2 {
-    background-color: #836DAF;
+    background-color: #D6CCA8;
     width: 1800px;
     height: 1800px;
     position: absolute;
@@ -404,13 +417,46 @@
 }
 
 .news-gallery-circle3 {
-    background-color: #F3C8C1;
+    background-color: #2B8B99;
     width: 1600px;
     height: 1600px;
     position: absolute;
     left: -700px;
     top: 1000px;
     filter: blur(350px);
+    z-index: 0;
+}
+
+.news-gallery-pattern1 {
+    width: 1350px;
+    height: 1350px;
+    position: absolute;
+    left: -400px;
+    top: -250px;
+    background: url("/assets/images/pattern.png");
+    background-size: cover;
+    z-index: 0;
+}
+
+.news-gallery-pattern2 {
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    right: -800px;
+    top: 800px;
+    background: url("/assets/images/pattern.png");
+    background-size: cover;
+    z-index: 0;
+}
+
+.news-gallery-pattern3 {
+    width: 1350px;
+    height: 1350px;
+    position: absolute;
+    left: -400px;
+    top: 2500px;
+    background: url("/assets/images/pattern.png");
+    background-size: cover;
     z-index: 0;
 }
 
@@ -553,6 +599,7 @@
 .gallery-list img {
     width: 100%;
     height: 100%;
+    border-radius: .5rem;
     object-fit: cover;
 }
 

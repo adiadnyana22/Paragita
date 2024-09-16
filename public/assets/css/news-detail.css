@@ -128,7 +128,7 @@
     height: 1000px;
     right: -50px;
     top: 700px;
-    background: rgba(237, 184, 170, 0.5);
+    background: #2B8B99;
     filter: blur(350px);
     z-index: 1;
 }
@@ -139,7 +139,7 @@
     height: 750px;
     left: -200px;
     top: 1100px;
-    background: #836DAF;
+    background: #D6CCA8;
     filter: blur(250px);
     z-index: 1;
 }
@@ -150,8 +150,19 @@
     height: 1000px;
     left: -400px;
     top: 1500px;
-    background: #E089B5;
+    background: #D6CCA8;
     filter: blur(250px);
+    z-index: 1;
+}
+
+.background-circle-pattern1 {
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    left: 100px;
+    top: 900px;
+    background: url("/assets/images/pattern.png");
+    background-size: cover;
     z-index: 1;
 }
 
