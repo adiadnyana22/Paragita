@@ -44,17 +44,38 @@
                                 <td>{{ $count++ }}</td>
                                 <td>{{ $label->nama }}</td>
                                 <td class="d-flex flex-wrap" style="gap: .5rem">
-                                    <form method="POST" action="{{ route('adminMerchLabelDeleteMethod', $label->id) }}">
-                                        @method('DELETE')
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger btn-sm del">Delete</button>
-                                    </form>
+                                    <button type="button" class="btn btn-danger btn-sm del" data-toggle="modal" data-target="#myModal" data-id="{{ $label->id }}">Delete</button>
                                     <a href="{{ route('adminMerchLabelEdit', $label->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Konfirmasi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Menghapus label ini akan menghapus semua produk terkait</strong>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <form method="POST" id="modalForm">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Lanjutkan</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -67,5 +88,11 @@
         $(document).ready(function() {
             $('#dataTable').DataTable();
         });
+
+        $('#myModal').on('show.bs.modal', function (event) {
+            let button = $(event.relatedTarget);
+
+            $('#modalForm').attr('action', '/api/merch-label/delete/' + button.data('id'));
+        })
     </script>
 @endsection

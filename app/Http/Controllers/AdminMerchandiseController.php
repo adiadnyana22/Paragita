@@ -66,6 +66,13 @@ class AdminMerchandiseController extends Controller
     }
 
     public function labelDeleteMethod(Label $label) {
+        $merchandises = Merchandise::where('label_id', '=', $label->id)->get();
+
+        foreach ($merchandises as $merch) {
+            File::delete('assets/images/merchandise/'.$merch->foto);
+            $merch->delete();
+        }
+
         $label->delete();
 
         return redirect()->route('adminMerchLabel');
